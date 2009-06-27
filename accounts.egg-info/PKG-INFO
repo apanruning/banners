@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: accounts
+Version: 0.1dev-r173
+Summary: A simple accounts app made for use in the "nomenclador cartográfico" of Comercio y Justicia
+Home-page: http://www.revolucionesweb.com.ar
+Author: Ale Peralta, Matías Iturburu
+Author-email: UNKNOWN
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: Framework :: django
+Classifier: Topic :: Software Development :: Libraries :: Python Modules :: 
