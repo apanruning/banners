@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: banners
+Version: 0.1dev
+Summary: A simple banner manager app
+Home-page: http://revolucionesweb.com.ar
+Author: Revoluciones Informáticas
+Author-email: info@revolucionesweb.com.ar
+License: UNKNOWN
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Keywords: Banners,Django
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
