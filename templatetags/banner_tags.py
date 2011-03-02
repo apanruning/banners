@@ -7,17 +7,16 @@ register = template.Library()
 def pop_slot(slot):
     banner=None
     try :
-        banners = Banner.objects.filter(slot=slot)
-    except Banner.DoesNotExists:
-        banners=None
-    if banners:
-        banner = choice(banners)
+        banner = choice(Banner.objects.filter(slot=slot))
+    except:
+        banner=None
+
     return {'banner':banner}
     
-@register.inclusion_tag('../templates/slot.html')
+@register.inclusion_tag('slot.html')
 def lookup_banners(slot):
     try :
         banners = Banner.objects.filter(slot__contains=slot)
-    except Banner.DoesNotExists:
+    except:
         banners=None
     return {'banners':banners}
