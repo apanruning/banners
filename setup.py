@@ -19,8 +19,8 @@ setup(name='banners',
       license='',
       packages=find_packages(exclude=['ez_setup']),
       package_data={
-        'banners' : ['templates/*.html']
-      }
+        'banners' : ['templates/*.html'],
+      },
       namespace_packages=[],
       include_package_data=True,
       zip_safe=False,
