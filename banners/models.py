@@ -4,14 +4,20 @@ from django.db import models
 from tagging.fields import TagField
 from django.template.loader import render_to_string
 from django.template.defaultfilters import slugify
+from django.template import Context, Template
 
 class Banner(models.Model):
-    code = models.CharField(max_length=1024, blank=True, null=True)
+    code = models.TextField(max_length=1024, blank=True, null=True)
     slot = TagField()
     clicks = models.PositiveIntegerField(default=0, blank=True)
     views = models.PositiveIntegerField(default=0, blank=True)
+
     def __unicode__(self):
         return "Banner #%s on %s" %(self.pk, self.slot)
+
+    def render_code(self):
+        template = Template(self.code)
+        return template.render(Context({'object': self,}))
     
 class TemplateBanner(Banner):
     image = models.ImageField(upload_to='banners', null=True)
