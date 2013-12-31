@@ -16,7 +16,7 @@ setup(name='banners',
       author='Revoluciones Informáticas',
       author_email='info@revolucionesweb.com.ar',
       url='http://revolucionesweb.com.ar',
-      license='',
+      license='MIT',
       packages=find_packages(exclude=['ez_setup']),
       package_data={
         'banners' : ['templates/*.html'],
