@@ -24,7 +24,8 @@ setup(name='banners',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'django'
+          'django',
+          'django-taggit'
       ],
       entry_points="""
       # -*- Entry points: -*-
