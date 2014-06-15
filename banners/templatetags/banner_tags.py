@@ -3,18 +3,20 @@ from banners.models import Banner
 from random import choice
 register = template.Library()
 
+
 @register.inclusion_tag('single.html')
 def pop_slot(slot):
-    banner=None
-    banners = Banner.objects.filter(slot=slot)
+    banner = None
+    banners = Banner.objects.filter(slot__name=slot)
     if banners:
         banner = choice(banners)
-    return {'banner':banner}
-    
+    return {'banner': banner}
+
+
 @register.inclusion_tag('slot.html')
 def lookup_banners(slot):
-    try :
-        banners = Banner.objects.filter(slot__contains=slot)
+    try:
+        banners = Banner.objects.filter(slot__name__icontains=slot)
     except Banner.DoesNotExists:
-        banners=None
-    return {'banners':banners}
+        banners = None
+    return {'banners': banners}
